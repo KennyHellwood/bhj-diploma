@@ -13,7 +13,7 @@ class LoginForm extends AsyncForm {
         User.login(data, (err, response) => {
             if (response && response.success === true) {
                 // сбрасываем данные формы
-                document.forms['login-form'].reset();
+                this.element.reset();
                 // авторизуем пользователя
                 App.setState('user-logged');
                 // закрываем форму

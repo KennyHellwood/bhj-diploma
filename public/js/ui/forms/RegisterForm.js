@@ -13,7 +13,7 @@ class RegisterForm extends AsyncForm {
         User.register(data, (err, response) => {
             if (response && response.success === true) {
                 // сбрасываем данные формы
-                document.forms['register-form'].reset();
+                this.element.reset();
                 // авторизуем пользователя
                 App.setState('user-logged');
                 // закрываем форму

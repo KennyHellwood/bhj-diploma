@@ -15,7 +15,7 @@ class CreateAccountForm extends AsyncForm {
                 // закрываем форму
                 App.getModal('createAccount').close();
                 // сбрасываем данные формы
-                document.forms['new-account-form'].reset();
+                this.element.reset();
                 // обновляем данные аккаунта
                 App.update();
             }

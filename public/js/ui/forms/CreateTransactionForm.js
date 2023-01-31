@@ -46,8 +46,9 @@ class CreateTransactionForm extends AsyncForm {
                 App.getModal('newIncome').close();
                 App.getModal('newExpense').close();
                 // сбрасываем данные формы
-                document.forms['new-income-form'].reset();
-                document.forms['new-expense-form'].reset();
+                // document.forms['new-income-form'].reset();
+                // document.forms['new-expense-form'].reset();
+                this.element.reset();
                 // обновляем данные аккаунта
                 App.update();
             }
